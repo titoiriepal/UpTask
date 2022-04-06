@@ -37,29 +37,45 @@ class LoginController{
         ]);
     }
 
-    public static function olvide(){
-        echo "Desde Olvide mi Password";
+    public static function olvide(Router $router){
+        
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             echo "Cambiando Password...";
         }
+
+            //Muestra la vista
+        $router->render('auth/olvide', [
+            'titulo' => 'Olvide mi Password'
+        ]);
     }
 
-    public static function restablecer(){
-        echo "Desde restablecer mi Password";
+    public static function restablecer(Router $router){
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            echo "Restableciendo Password...";
+            echo "Reestableciendo Password...";
         }
+
+        $router->render('auth/restablecer', [
+            'titulo' => 'Reestablece tu Password'
+        ]);
     }
 
-    public static function mensaje(){
-        echo "Desde Mensaje";
+    public static function mensaje(Router $router){
+        
+
+        $router->render('auth/mensaje', [
+            'titulo' => 'Reestablece tu Password'
+        ]);
 
     }
 
-    public static function confirmar(){
-        echo "Desde Confirmar";
+    public static function confirmar(Router $router){
 
+
+        $router->render('auth/confirmar', [
+            'titulo' => 'Confirma tu cuenta Uptask'
+        ]);
     }
+
 }
