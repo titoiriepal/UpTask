@@ -68,8 +68,8 @@ class Email{
         $mail->Username = '7c9488e49c4f96';
         $mail->Password = '84f7f866fa2635';
 
-        $mail->setFrom('cuentas@appsalon.com');
-        $mail->addAddress('cuentax@appsalon.com', 'AppSalon.com');
+        $mail->setFrom('cuentas@uptask.com');
+        $mail->addAddress('cuentas@uptask.com', 'upTask.com');
         $mail->Subject = 'Reestablece tu password';
 
         //Set HTML
@@ -79,7 +79,7 @@ class Email{
 
         $contenido = "<html>";
         $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> Has solicitado reestablecer tu Password. Pulsa el siguiente enlace para hacerlo.</p>";
-        $contenido .= "<p>Presiona aquí: <a href='http://localhost:3000/recuperar?token=" . $this->token . "'>Reestablecer Password</a></p>";
+        $contenido .= "<p>Presiona aquí: <a href='http://localhost:3000/restablecer?token=" . $this->token . "'>Reestablecer Password</a></p>";
         $contenido .= "<p>Si tú no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido .= "</html>";
 
