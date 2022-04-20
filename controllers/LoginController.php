@@ -69,6 +69,7 @@ class LoginController{
         $alertas=[];
         
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $_POST['email'] = strtolower($_POST['email']);
             $usuario->sincronizar($_POST);
 
             $alertas=$usuario->validarNuevaCuenta();
