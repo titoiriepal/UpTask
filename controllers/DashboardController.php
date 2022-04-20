@@ -150,7 +150,7 @@ class DashboardController{
                     $usuario->password = $_POST['password'];
                     $usuario->hashPassword();
                     if($usuario->guardar()){
-                        Usuario::setAlerta('exito','La contraseña se cambio correctamente');
+                        Usuario::setAlerta('exito','La contraseña se cambió correctamente');
                     }
                     
                 }else{
